@@ -59,8 +59,7 @@ def stop():
     PersonalB = PersonalB.replace(":","")
     print int(CurrentTime)
     print int(PersonalB)
-    if CurrentTime > PersonalB:
-        timeDif = abs(int(CurrentTime) - int(PersonalB))
+    if PersonalB > CurrentTime:
         tkMessageBox.showinfo("Yaoi PB", "Good job by smashing your PB take a Yaoi image")
         ran = random.randint(0,5)
         print ran

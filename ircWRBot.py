@@ -1,9 +1,4 @@
-import sys
-import re
-import codecs
-import socket
-import os
-import json
+import sys, re, codecs, socket, os, json
 from bs4 import BeautifulSoup as bs4 # Download BeautifulSoup4 - name folder bs4
 import urllib2 # need this becuase python and something
 from urllib2 import urlopen

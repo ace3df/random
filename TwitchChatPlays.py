@@ -34,6 +34,7 @@ class TwitchChatPlays:
         select = "u"
         start = "y"
 
+
         # Let's count how many times each button is pressed!
         k = PyKeyboard()
         a = 0
@@ -93,39 +94,39 @@ class TwitchChatPlays:
 
                 if repy['msg'] == "up":
                   up =+ 1 
-                  k.press_key(o)
+                  k.press_key(up)
                   time.sleep(0.5)
-                  k.release_key(o)
+                  k.release_key(up)
 
                 if repy['msg'] == "down":
                   down =+ 1 
-                  k.press_key(m)
+                  k.press_key(down)
                   time.sleep(0.5)
-                  k.release_key(m)
+                  k.release_key(down)
 
                 if repy['msg'] == "left":
                   left =+ 1 
-                  k.press_key(k)
+                  k.press_key(left)
                   time.sleep(0.5)
-                  k.release_key(k)
+                  k.release_key(left)
 
                 if repy['msg'] == "right":
                   right =+ 1 
-                  k.press_key(l)
+                  k.press_key(right)
                   time.sleep(0.5)
-                  k.release_key(l)
+                  k.release_key(right)
 
                 if repy['msg'] == "start":
                   start =+ 1 
-                  k.press_key(y)
+                  k.press_key(start)
                   time.sleep(0.5)
-                  k.release_key(y)
+                  k.release_key(start)
 
                 if repy['msg'] == "select":
                   select =+ 1 
-                  k.press_key(u)
+                  k.press_key(select)
                   time.sleep(0.5)
-                  k.release_key(u)
+                  k.release_key(select)
 
                 ## Print Stats
                 if repy['msg'] == "stats" and nickname in repy['sender']:

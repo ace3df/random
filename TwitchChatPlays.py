@@ -1,31 +1,19 @@
 from pykeyboard import PyKeyboard
-import sys, re, codecs, socket
+import sys, re, codecs, socket, time
 
 class TwitchChatPlays:
 
     socket = None
     connected = False
 
-    ''' What I've defined each button, change k.tap_key('_') to what you want!
-     right = l
-     left = k
-     up = o
-     down = m
-     a = a
-     b = b 
-     select = u
-     start = y
-
-    '''
-
     def __init__(self):
         self.socket = socket.socket()
         #nick
-        nickname = "TWITCH USERNAME"
+        nickname = "ace3df"
         #pass
-        password = "YOUR TWITCH OUTH HERE"
+        password = "oauth:j4m91wa9gv97m3dotp02z8di4iba2de"
         #channels
-        channels = "#YOURTWITCHCHANNEL"
+        channels = "#ace3df"
         # irc temp
         ircserv = "irc.twitch.tv"
 
@@ -35,6 +23,18 @@ class TwitchChatPlays:
         self.send("PASS %s" % password)
         self.send("NICK %s" % nickname)
         self.send("JOIN %s" % channels)
+        
+
+        # What I've defined each button w/e
+        right = "l"
+        left = "k"
+        up = "o"
+        down = "m"
+        a = "a"
+        b = "b"
+        select = "u"
+        start = "y"
+
 
         # Let's count how many times each button is pressed!
         k = PyKeyboard()
@@ -59,7 +59,7 @@ class TwitchChatPlays:
                   self.send("PONG")
                 # If password wrong warn user why it might be!
                 if databuff.find("unsuccessful") != -1:
-                  print("Please check your Twitch OAUTH!")
+                  print("Please check your Twitch OAUTH in settings.txt!")
 
                 if databuff == '':
                     continue
@@ -82,36 +82,52 @@ class TwitchChatPlays:
                 if repy['msg'] == "a":
                   a =+ 1 
                   # Press button that is defind as 'a' on emulator
-                  k.tap_key('a')
+                  k.press_key(a)
+                  time.sleep(0.5)
+                  k.release_key(a)
 
                 if repy['msg'] == "b":
                   b =+ 1 
                   # Press button that is defind as 'b' on emulator
-                  k.tap_key('b')
+                  k.press_key(b)
+                  time.sleep(0.5)
+                  k.release_key(b)
 
                 if repy['msg'] == "up":
                   up =+ 1 
-                  k.tap_key('o')
+                  k.press_key(o)
+                  time.sleep(0.5)
+                  k.release_key(o)
 
                 if repy['msg'] == "down":
                   down =+ 1 
-                  k.tap_key('m')
+                  k.press_key(m)
+                  time.sleep(0.5)
+                  k.release_key(m)
 
                 if repy['msg'] == "left":
                   left =+ 1 
-                  k.tap_key('k')
+                  k.press_key(k)
+                  time.sleep(0.5)
+                  k.release_key(k)
 
                 if repy['msg'] == "right":
                   right =+ 1 
-                  k.tap_key('l')
+                  k.press_key(l)
+                  time.sleep(0.5)
+                  k.release_key(l)
 
                 if repy['msg'] == "start":
                   start =+ 1 
-                  k.tap_key('y')
+                  k.press_key(y)
+                  time.sleep(0.5)
+                  k.release_key(y)
 
                 if repy['msg'] == "select":
                   select =+ 1 
-                  k.tap_key('u')
+                  k.press_key(u)
+                  time.sleep(0.5)
+                  k.release_key(u)
 
                 ## Print Stats
                 if repy['msg'] == "stats" and nickname in repy['sender']:

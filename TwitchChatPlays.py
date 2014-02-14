@@ -23,7 +23,6 @@ class TwitchChatPlays:
         self.send("PASS %s" % password)
         self.send("NICK %s" % nickname)
         self.send("JOIN %s" % channels)
-        
 
         # What I've defined each button w/e
         right = "l"
@@ -34,7 +33,6 @@ class TwitchChatPlays:
         b = "b"
         select = "u"
         start = "y"
-
 
         # Let's count how many times each button is pressed!
         k = PyKeyboard()

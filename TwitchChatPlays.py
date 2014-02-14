@@ -9,11 +9,11 @@ class TwitchChatPlays:
     def __init__(self):
         self.socket = socket.socket()
         #nick
-        nickname = "ace3df"
+        nickname = "twitch username"
         #pass
-        password = "oauth:j4m91wa9gv97m3dotp02z8di4iba2de"
+        password = "TWITCH OUTH KEY"
         #channels
-        channels = "#ace3df"
+        channels = "#twitch channel"
         # irc temp
         ircserv = "irc.twitch.tv"
 

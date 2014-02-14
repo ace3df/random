@@ -11,7 +11,7 @@ class TwitchChatPlays:
         #nick
         nickname = "twitch username"
         #pass
-        password = "TWITCH OUTH KEY"
+        password = "TWITCH OAUTH KEY"
         #channels
         channels = "#twitch channel"
         # irc temp
@@ -34,7 +34,6 @@ class TwitchChatPlays:
         select = "u"
         start = "y"
 
-
         # Let's count how many times each button is pressed!
         k = PyKeyboard()
         a = 0
@@ -45,7 +44,6 @@ class TwitchChatPlays:
         right = 0
         start = 0
         select = 0
-        #########
 
         while True:
             databuff = self.socket.recv(4096)

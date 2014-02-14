@@ -124,6 +124,6 @@ class TwitchChatPlays:
 
         # To send say commands
     def say(self, msg, to):
-        self.send("PRIVMSG %s :%s" % (to, msg)))
+        self.send("PRIVMSG %s :%s" % (to, msg))
 
 TwitchChatPlays()

@@ -23,27 +23,43 @@ class TwitchChatPlays:
         self.send("PASS %s" % password)
         self.send("NICK %s" % nickname)
         self.send("JOIN %s" % channels)
+        # Open TAS input file!
+        tasput = []
+        try:
+          tasput = open('tcp.txt', 'r')
+          ''' Example of a file:
+          a
+          up
+          up
+          down
+          down
+          b
+          b '''
+        except:
+          print "No TAS file"
 
         # What I've defined each button w/e
         right = "l"
         left = "k"
         up = "o"
         down = "m"
-        a = "a"
-        b = "b"
+        button_a = "a"
+        button_b = "b"
         select = "u"
         start = "y"
 
+
         # Let's count how many times each button is pressed!
         k = PyKeyboard()
-        a = 0
-        b = 0
+        button_a = 0
+        button_b = 0
         up = 0
         down = 0
         left = 0
         right = 0
         start = 0
         select = 0
+        #########
 
         while True:
             databuff = self.socket.recv(4096)
@@ -56,7 +72,7 @@ class TwitchChatPlays:
                   self.send("PONG")
                 # If password wrong warn user why it might be!
                 if databuff.find("unsuccessful") != -1:
-                  print("Please check your Twitch OAUTH!")
+                  print("Please check your Twitch OAUTH in settings.txt!")
 
                 if databuff == '':
                     continue
@@ -76,19 +92,83 @@ class TwitchChatPlays:
                 if repy['target'] == nickname:
                     target = repy['sender'].split("!")[0]
 
+                if repy['msg'] == "tas" and nickname in repy['sender']:
+
+                  for line in tasput:
+
+                    if line == "a\n":
+                      self.say("a", target)
+                      button_a =+ 1 
+                      # Press button that is defind as 'a' on emulator
+                      k.press_key(button_a)
+                      time.sleep(0.5)
+                      k.release_key(button_a)
+
+                    if line == "b\n":
+                      self.say("b", target)
+                      button_b =+ 1 
+                      # Press button that is defind as 'b' on emulator
+                      k.press_key(button_b)
+                      time.sleep(0.5)
+                      k.release_key(button_b)
+
+                    if line == "up\n":
+                      self.say("up", target)
+                      up =+ 1 
+                      k.press_key(up)
+                      time.sleep(0.5)
+                      k.release_key(up)
+
+                    if line == "down\n":
+                      self.say("down", target)
+                      down =+ 1 
+                      k.press_key(down)
+                      time.sleep(0.5)
+                      k.release_key(down)
+
+                    if line == "left\n":
+                      self.say("left", target)
+                      left =+ 1 
+                      k.press_key(left)
+                      time.sleep(0.5)
+                      k.release_key(left)
+
+                    if line == "right\n":
+                      self.say("right", target)
+                      right =+ 1 
+                      k.press_key(right)
+                      time.sleep(0.5)
+                      k.release_key(right)
+
+                    if line == "start\n":
+                      self.say("start", target)
+                      start =+ 1 
+                      k.press_key(start)
+                      time.sleep(0.5)
+                      k.release_key(start)
+
+                    if line == "select\n":
+                      self.say("select", target)
+                      select =+ 1 
+                      k.press_key(select)
+                      time.sleep(0.5)
+                      k.release_key(select)
+
+
+
                 if repy['msg'] == "a":
-                  a =+ 1 
+                  button_a =+ 1 
                   # Press button that is defind as 'a' on emulator
-                  k.press_key(a)
+                  k.press_key(button_a)
                   time.sleep(0.5)
-                  k.release_key(a)
+                  k.release_key(button_a)
 
                 if repy['msg'] == "b":
-                  b =+ 1 
+                  button_b =+ 1 
                   # Press button that is defind as 'b' on emulator
-                  k.press_key(b)
+                  k.press_key(button_b)
                   time.sleep(0.5)
-                  k.release_key(b)
+                  k.release_key(button_b)
 
                 if repy['msg'] == "up":
                   up =+ 1 
@@ -96,7 +176,7 @@ class TwitchChatPlays:
                   time.sleep(0.5)
                   k.release_key(up)
 
-                if repy['msg'] == "down":
+                if repy['msg'] == " down":
                   down =+ 1 
                   k.press_key(down)
                   time.sleep(0.5)
@@ -128,7 +208,7 @@ class TwitchChatPlays:
 
                 ## Print Stats
                 if repy['msg'] == "stats" and nickname in repy['sender']:
-                	print a, b, up, down, left, right, start, select	
+                	print button_a, button_b, up, down, left, right, start, select	
 
         # To send basic IRC server talk
     def send(self, msg):

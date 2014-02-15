@@ -56,7 +56,7 @@ class TwitchChatPlays:
                   self.send("PONG")
                 # If password wrong warn user why it might be!
                 if databuff.find("unsuccessful") != -1:
-                  print("Please check your Twitch OAUTH in settings.txt!")
+                  print("Please check your Twitch OAUTH!")
 
                 if databuff == '':
                     continue

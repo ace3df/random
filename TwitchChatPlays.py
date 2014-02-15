@@ -96,6 +96,10 @@ class TwitchChatPlays:
                 if repy['msg'] == "tas" and nickname in repy['sender']:
 
                   for line in tasput:
+                    if line[15]:
+                      time.sleep(30) # Don't want Twitch ban yo
+                      
+                    time.sleep(0.5)
 
                     if line == "a\n":
                       self.say("a", target)

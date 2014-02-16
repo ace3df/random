@@ -101,7 +101,7 @@ class TwitchChatPlays:
                       time.sleep(30) # Don't want Twitch ban yo
                       x = 0
                       
-                    time.sleep(0.5)
+                    time.sleep(0.2)
                     x = x + 1
 
                     if line == "a\n":
@@ -109,7 +109,7 @@ class TwitchChatPlays:
                       button_a =+ 1 
                       # Press button that is defind as 'a' on emulator
                       k.press_key('a')
-                      time.sleep(0.5)
+                      time.sleep(0.2)
                       k.release_key('a')
 
                     if line == "b\n":
@@ -117,49 +117,49 @@ class TwitchChatPlays:
                       button_b =+ 1 
                       # Press button that is defind as 'b' on emulator
                       k.press_key('b')
-                      time.sleep(0.5)
+                      time.sleep(0.2)
                       k.release_key('b')
 
                     if line == "up\n":
                       self.say("up", target)
                       up =+ 1 
                       k.press_key('o')
-                      time.sleep(0.5)
+                      time.sleep(0.2)
                       k.release_key('o')
 
                     if line == "down\n":
                       self.say("down", target)
                       down =+ 1 
                       k.press_key('m')
-                      time.sleep(0.5)
+                      time.sleep(0.2)
                       k.release_key('m')
 
                     if line == "left\n":
                       self.say("left", target)
                       left =+ 1 
                       k.press_key('k')
-                      time.sleep(0.5)
+                      time.sleep(0.2)
                       k.release_key('k')
 
                     if line == "right\n":
                       self.say("right", target)
                       right =+ 1 
                       k.press_key('l')
-                      time.sleep(0.5)
+                      time.sleep(0.2)
                       k.release_key('l')
 
                     if line == "start\n":
                       self.say("start", target)
                       start =+ 1 
                       k.press_key('y')
-                      time.sleep(0.5)
+                      time.sleep(0.2)
                       k.release_key('y')
 
                     if line == "select\n":
                       self.say("select", target)
                       select =+ 1 
                       k.press_key('u')
-                      time.sleep(0.5)
+                      time.sleep(0.2)
                       k.release_key('u')
 
 
@@ -168,50 +168,50 @@ class TwitchChatPlays:
                   button_a =+ 1 
                   # Press button that is defind as 'a' on emulator
                   k.press_key('a')
-                  time.sleep(0.5)
+                  time.sleep(0.2)
                   k.release_key('a')
 
                 if repy['msg'] == "b":
                   button_b =+ 1 
                   # Press button that is defind as 'b' on emulator
                   k.press_key('b')
-                  time.sleep(0.5)
+                  time.sleep(0.2)
                   k.release_key('b')
 
                 if repy['msg'] == "up":
                   up =+ 1 
                   k.press_key('o')
-                  time.sleep(0.5)
+                  time.sleep(0.2)
                   k.release_key('o')
 
                 if repy['msg'] == " down":
                   down =+ 1 
                   k.press_key('m')
-                  time.sleep(0.5)
+                  time.sleep(0.2)
                   k.release_key('m')
 
                 if repy['msg'] == "left":
                   left =+ 1 
                   k.press_key('k')
-                  time.sleep(0.5)
+                  time.sleep(0.2)
                   k.release_key('k')
 
                 if repy['msg'] == "right":
                   right =+ 1 
                   k.press_key('l')
-                  time.sleep(0.5)
+                  time.sleep(0.2)
                   k.release_key('l')
 
                 if repy['msg'] == "start":
                   start =+ 1 
                   k.press_key('y')
-                  time.sleep(0.5)
+                  time.sleep(0.2)
                   k.release_key('y')
 
                 if repy['msg'] == "select":
                   select =+ 1 
                   k.press_key('u')
-                  time.sleep(0.5)
+                  time.sleep(0.2)
                   k.release_key('u')
 
                 ## Print Stats

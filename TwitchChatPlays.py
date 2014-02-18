@@ -93,6 +93,8 @@ class TwitchChatPlays:
                 if repy['target'] == nickname:
                     target = repy['sender'].split("!")[0]
 
+                ''' Ingore this if you're not going to use TAS file.
+
                 if repy['msg'] == "tas" and nickname in repy['sender']:
 
                   x = 0
@@ -160,7 +162,7 @@ class TwitchChatPlays:
                       select =+ 1 
                       k.press_key('u')
                       time.sleep(0.2)
-                      k.release_key('u')
+                      k.release_key('u')'''
 
 
 

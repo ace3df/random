@@ -57,7 +57,7 @@ for url in lines:
 
 	x = x + 1
 	if x == 10:
-		time.sleep(100)
+		time.sleep(300)
 	else:
 		time.sleep(20)
 

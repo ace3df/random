@@ -93,8 +93,6 @@ for url in lines:
 		osulink = "http://osu.ppy.sh" + str(temp)
 		print osulink
 		# Go to /d/ link
+	# Call function and return that it had downloaded!
 	download_map(osulink, bmapname)
-
-	# save_html is also just download so we download the map and save it as the map title + filetype
 	print bmapname + " - Downloaded!"
-#	download_map(downloadlink, bmapname)

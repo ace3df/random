@@ -1,6 +1,6 @@
-import sys, re, codecs, socket, os, time
-import base64
-import win32gui
+# Don't need any 3rd party~
+
+import sys, re, codecs, socket, os, time, win32gui
 
 class TwitchOsuSong:
 

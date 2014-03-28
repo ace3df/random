@@ -35,11 +35,6 @@ namespace Yaoi_Timer_1._3
             lblTimer.ForeColor = System.Drawing.ColorTranslator.FromHtml("#FFFF00");
         }
 
-        private void bntSplit_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnStop_Click(object sender, EventArgs e)
         {
             var PAUSECOLOUR = "#FF0000";
@@ -47,16 +42,6 @@ namespace Yaoi_Timer_1._3
             sw.Stop();
             MainTimer.Stop();
             lblTimer.ForeColor = System.Drawing.ColorTranslator.FromHtml(PAUSECOLOUR);
-        }
-
-        private void lblTimer_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void MainTimer_Tick(object sender, EventArgs e)

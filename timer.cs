@@ -37,6 +37,7 @@ namespace Yaoi_Timer_1._3
 
         private void btnStop_Click(object sender, EventArgs e)
         {
+            // I was going to make a whole settings thing, to change colours and whatnot but :effort:
             var PAUSECOLOUR = "#FF0000";
             sw = System.Diagnostics.Stopwatch.StartNew();
             sw.Stop();

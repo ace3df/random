@@ -22,7 +22,7 @@ if "Songs" in osuDir:
 else:
 		osuDir = osuDir + "Songs\\"
 
-''' For each folder in the Songs folder:
+''' For each folder in the Songs folder: 
 Print the Map Folder name (so the user knows where it's at)
 Change Dir to the map folder
 For each file in the map folder check if the filetype is in the list types

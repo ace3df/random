@@ -5,9 +5,10 @@ time - Less chance of Python being dumb
 '''
 import os, glob, time
  
-''' Delete all 'extra' filetypes and create empty array '''
+''' Delete all 'extra' filetypes, create empty array and set total deleted size '''
 types = ('*.wav', '*.jpg', '*.png', '*.avi')
 files_grabbed = []
+total_del = 0
 
 ''' Get user to input osu! Location '''
 osuDir = raw_input("osu.exe Folder Location (Leave blank if Program Files (x86)): ")
@@ -45,6 +46,7 @@ for songfolder in os.listdir(osuDir):
 		for file in files_grabbed:
 			print file
 			try:
+				total_del = total_del + os.path.getsize(osuDir + songfolder + "\\" + file)
 				os.remove(osuDir + songfolder + "\\" + file)
 				print "DELETED: " + osuDir + songfolder + "\\" + file
 			except:
@@ -53,6 +55,7 @@ for songfolder in os.listdir(osuDir):
 		print "Error: ", songfolder
 		print "Passing..."
 		pass
-
+		
+total_del = (total_del / 1024) / 1024
+print("Total Space Saved: ") + str(total_del) + "MB"
 raw_input("Finished deleting extra files!")
-sys.quit()

@@ -26,7 +26,7 @@ if osuDir == "":
 if "Songs" in osuDir:
 		pass
 else:
-		osuDir = osuDir + "BOB\\"
+		osuDir = osuDir + "Songs\\"
 
 ''' For each folder in the Songs folder: 
 Print the Map Folder name (so the user knows where it's at)

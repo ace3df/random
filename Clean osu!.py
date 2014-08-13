@@ -13,7 +13,7 @@ total_del = 0
 ''' Get user to input osu! Location '''
 osuDir = raw_input("osu.exe Folder Location (Leave blank if Program Files (x86)): ")
 
-''' If empty then set default Loc '''
+''' If empty then set default Loc ''' 
 if osuDir == "":
 	try:
 		osuDir = os.path.dirname(os.path.realpath(__file__))[0:3] + "Program Files (x86)\\osu!\\"

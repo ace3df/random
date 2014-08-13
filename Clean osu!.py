@@ -39,7 +39,6 @@ Print error incase it happens '''
 for songfolder in os.listdir(osuDir):
 	try:
 		time.sleep(1)
-		print songfolder
 		os.chdir(osuDir + songfolder)
 		for infolder in types:
 			files_grabbed.extend(glob.glob(infolder))

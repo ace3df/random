@@ -6,7 +6,7 @@ time - Less chance of Python being dumb
 import os, glob, time
  
 ''' Delete all 'extra' filetypes, create empty array and set total deleted size '''
-types = ('*.wav', '*.jpg', '*.png', '*.avi')
+types = ('*.wav', '*.jpg', '*.png', '*.avi', '*.db')
 files_grabbed = []
 total_del = 0
 
@@ -26,7 +26,7 @@ if osuDir == "":
 if "Songs" in osuDir:
 		pass
 else:
-		osuDir = osuDir + "Songs\\"
+		osuDir = osuDir + "BOB\\"
 
 ''' For each folder in the Songs folder: 
 Print the Map Folder name (so the user knows where it's at)
@@ -35,19 +35,16 @@ For each file in the map folder check if the filetype is in the list types
 Place each file from there into the empty array
 For each file in the array, delete.
 Print error incase it happens '''
-
+print "Deleting..."
 for songfolder in os.listdir(osuDir):
 	try:
-		time.sleep(1)
 		os.chdir(osuDir + songfolder)
 		for infolder in types:
 			files_grabbed.extend(glob.glob(infolder))
 		for file in files_grabbed:
-			print file
 			try:
 				total_del = total_del + os.path.getsize(osuDir + songfolder + "\\" + file)
 				os.remove(osuDir + songfolder + "\\" + file)
-				print "DELETED: " + osuDir + songfolder + "\\" + file
 			except:
 				pass
 	except:

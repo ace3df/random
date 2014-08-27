@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name       osu! Beatmap Mirror
 // @version    1.0
-// @description  Adds a mirror links to osu! download page.
+// @description  Adds a mirror link to osu! download pages
 // @include		https://osu.ppy.sh/p/*
 // @include		https://osu.ppy.sh/s/*
 // @copyright  Ace3DF, 2014

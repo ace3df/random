@@ -25,9 +25,12 @@ for(i = 0; i < search.length; i++){
 // Get Beatmap ID from URL and split up - /s/ /beatmapID/
 var osuURL = window.location.pathname.split( '/' );
 // Only request the ID
-var beatmapID = osuURL[2]; 
+var beatmapID = osuURL[2];
+// Check if URL is a number (map) and not just a normal page
+if (!isNaN(beatmapID)) { 
 // Find the header HTML to edit and add the links
-var html = document.getElementsByTagName("h1")[0]; // Get location to add the link to the site
-html.innerHTML = html.innerHTML + "<br>Mirror Links »<a href='http://bloodcat.com/osu/m/" + beatmapID + "'> Bloodcat</a>"; //Add Bloodcat
-html.innerHTML = html.innerHTML + " - <a href='http://loli.al/s/" + beatmapID + "'> loli</a>"; //Add loli
-html.innerHTML = html.innerHTML + " - <a href='http://osu.uu.gl/s/" + beatmapID + "'> uu.gl</a>"; //Add uu.gl
+	var html = document.getElementsByTagName("h1")[0]; // Get location to add the link to the site
+	html.innerHTML = html.innerHTML + "<br>Mirror Links »<a href='http://bloodcat.com/osu/m/" + beatmapID + "'> Bloodcat</a>"; //Add Bloodcat
+	html.innerHTML = html.innerHTML + " - <a href='http://loli.al/s/" + beatmapID + "'> loli</a>"; //Add loli
+	html.innerHTML = html.innerHTML + " - <a href='http://osu.uu.gl/s/" + beatmapID + "'> uu.gl</a>"; //Add uu.gl
+}

@@ -13,7 +13,7 @@ var search = document.getElementsByClassName("beatmap");
 // For each beatmap element stored in search, run a loop to add html to each element
 for(i = 0; i < search.length; i++){
     // Get beatmap ID
-    var BeatmapID = search[i].getAttribute('id')
+    var BeatmapID = search[i].getAttribute('id');
     // Find tag location
     var html = search[i].getElementsByClassName("tags")[0];
     html.innerHTML = html.innerHTML + ' <a href=""> » </a> <a href="http://bloodcat.com/osu/m/' + BeatmapID + '"> Bloodcat </a> ';

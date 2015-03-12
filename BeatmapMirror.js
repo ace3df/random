@@ -1,12 +1,12 @@
 // ==UserScript==
 // @name       osu! Beatmap Mirror
-// @version    1.1
+// @version    1.3
 // @description  Adds a mirror link to osu! download pages
 // @include     http*://osu.ppy.sh/b/*
 // @include     http*://osu.ppy.sh/s/*
 // @include     http*://osu.ppy.sh/p/beatmaplist
 // @copyright   Ace3DF, 2014
-// @grant GM_setValue
+// @updateURL https://raw.githubusercontent.com/ace3df/random/master/BeatmapMirror.js
 // ==/UserScript==
 
 // Beatmap search page

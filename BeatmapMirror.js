@@ -4,7 +4,9 @@
 // @description  Adds a mirror link to osu! download pages
 // @include     http*://osu.ppy.sh/b/*
 // @include     http*://osu.ppy.sh/s/*
-// @copyright  Ace3DF, 2014
+// @include     http*://osu.ppy.sh/p/beatmaplist
+// @copyright   Ace3DF, 2014
+// @grant GM_setValue
 // ==/UserScript==
 
 // Beatmap search page

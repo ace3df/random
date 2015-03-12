@@ -16,7 +16,7 @@ def Setup():
 			GetUserPPLoad(APIKey, IRCUsername, IRCPassword)
 	elif raw_input("Enable IRC Mode? (y/n): ") == "n":
 
-		APIKey = "18720f3b1ba3dfbb6716ef27bd3240b0d53844a5"
+		APIKey = "old"
 		IRCUsername = "Ace3DF"
 		GetUserPPLoad(APIKey, IRCUsername, IRCPassword)
 	else:

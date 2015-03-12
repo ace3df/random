@@ -30,7 +30,7 @@ var osuURL = window.location.pathname.split( '/' );
 // Only request the ID
 var beatmapID = osuURL[2];
 // Clean URL to make sure we get beatmap ID
-var beatmapID = beatmapID.split('&')[0]
+var beatmapID = beatmapID.split('&')[0];
 // Check if URL is a number (map) and not just a normal page
 if (!isNaN(beatmapID)) { 
 // Find the header HTML to edit and add the links

@@ -6,7 +6,8 @@
 // @include     http*://osu.ppy.sh/s/*
 // @include     http*://osu.ppy.sh/p/beatmaplist
 // @copyright   Ace3DF, 2014
-// @updateURL https://raw.githubusercontent.com/ace3df/random/master/BeatmapMirror.js
+// @updateURL   https://raw.gifsfsthubusercontent.com/ace3df/random/master/BeatmapMirror.js
+// @grant       none
 // ==/UserScript==
 
 // Beatmap search page
@@ -28,6 +29,8 @@ for(i = 0; i < search.length; i++){
 var osuURL = window.location.pathname.split( '/' );
 // Only request the ID
 var beatmapID = osuURL[2];
+// Clean URL to make sure we get beatmap ID
+var beatmapID = beatmapID.split('&')[0]
 // Check if URL is a number (map) and not just a normal page
 if (!isNaN(beatmapID)) { 
 // Find the header HTML to edit and add the links

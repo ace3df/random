@@ -6,7 +6,7 @@
 // @include     http*://osu.ppy.sh/s/*
 // @include     http*://osu.ppy.sh/p/beatmaplist
 // @copyright   Ace3DF, 2014
-// @updateURL   https://raw.gifsfsthubusercontent.com/ace3df/random/master/BeatmapMirror.js
+// @updateURL   https://raw.githubusercontent.com/ace3df/random/master/BeatmapMirror.js
 // @grant       none
 // ==/UserScript==
 

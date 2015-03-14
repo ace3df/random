@@ -25,7 +25,7 @@ for(i = 0; i < search.length; i++){
 }
 
 // Beatmap Page
-var beatmapID = document.getElementsByClassName('bmt')[0].src
+var beatmapID = document.getElementsByClassName('bmt')[0].src;
 beatmapID = beatmapID.replace(/^.*[\\\/]/, '');
 beatmapID = beatmapID.replace(/l.jpg/, '');
 

@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name       osu! Beatmap Mirror
-// @version    1.5
+// @version    1.6
 // @description  Adds a mirror link to osu! download pages
 // @include     http*://osu.ppy.sh/b/*
 // @include     http*://osu.ppy.sh/s/*
@@ -26,8 +26,9 @@ for(i = 0; i < search.length; i++){
 
 // Beatmap Page
 var beatmapID = document.getElementsByClassName('bmt')[0].src;
-beatmapID = beatmapID.replace(/^.*[\\\/]/, '');
-beatmapID = beatmapID.replace(/l.jpg/, '');
+beatmapID = beatmapID.split( '/' )[4];
+beatmapID = beatmapID.split( '.' )[0];
+beatmapID = beatmapID.replace(/l/, '');
 
 // Check if URL is a number (map) and not just a normal page
 if (!isNaN(beatmapID)) { 

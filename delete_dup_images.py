@@ -1,3 +1,7 @@
+"""
+A super simple script to delete dup images by comparing pixel hash.
+"""
+
 from PIL import Image
 import time
 import os
